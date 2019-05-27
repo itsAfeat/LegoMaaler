@@ -1,2 +1,2 @@
 # itsAfeat.github.io
-Lego Measure Online
+Measure things with lego men
