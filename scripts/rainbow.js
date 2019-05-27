@@ -1,4 +1,4 @@
-
+var colNum = 0;
 
 function changeCol() {
     var elm = document.getElementById("flash");
