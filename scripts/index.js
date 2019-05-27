@@ -1,3 +1,5 @@
+var colNum = 0;
+
 function btnClick(){
     if (document.getElementById("inText").value != "")
     {
