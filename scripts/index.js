@@ -2,7 +2,13 @@ function btnClick(){
     if (document.getElementById("inText").value != "")
     { 
         var sum = parseFloat(document.getElementById("inText").value, 10) / 4;
-        var text = "That would be " + sum + " lego men!";
+        var text = "";
+        if (isNumber(sum)) {
+            text = "That would be " + sum + " lego men!";
+        }
+        else {
+            text = "I said a number you dummy...";
+        }
 
         text = text.split(" ");
         len = text.length;
