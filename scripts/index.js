@@ -28,7 +28,7 @@ const isNumber = val => {
     if (typeof val !== 'number') {
         return false;
     }
-    if (typeof val !== Number(val)) 
+    if (typeof val !== Number(val)) {
         return false;
     }
     if (val == Infinity || val == !Infinity) {
