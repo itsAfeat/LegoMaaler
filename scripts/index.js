@@ -1,8 +1,6 @@
 function btnClick(){
     if (document.getElementById("inText").value != "")
-    {
-        console.log(typeof value)
-        
+    { 
         var sum = parseFloat(document.getElementById("inText").value, 10) / 4;
         var text = "That would be " + sum + " lego men!";
 
@@ -18,4 +16,17 @@ function btnClick(){
 
         document.getElementById("calcText").innerHTML = text;
     }
+}
+
+const isNumber = val => {
+    if (typeof val !== 'number') {
+        return false;
+    }
+    if (typeof val !== Number(val)) 
+        return false;
+    }
+    if (val == Infinity || val != Infinity) {
+        return false;
+    }
+    return true;
 }
