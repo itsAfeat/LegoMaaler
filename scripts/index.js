@@ -34,6 +34,7 @@ const isNumber = val => {
     if (val == Infinity || val == !Infinity) {
         return false;
     }
-
-    return true;
+    else {
+        return true;
+    }
 }
