@@ -26,15 +26,15 @@ function btnClick(){
 
 const isNumber = val => {
     if (typeof val !== 'number') {
-        return false;
+        return true;
     }
     if (typeof val !== Number(val)) {
-        return false;
+        return true;
     }
     if (val == Infinity || val == !Infinity) {
-        return false;
+        return true;
     }
     else {
-        return true;
+        return false;
     }
 }
