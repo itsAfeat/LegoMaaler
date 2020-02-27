@@ -3,7 +3,7 @@ function btnClick(){
     { 
         var sum = parseFloat(document.getElementById("inText").value, 10) / 4;
         var text = "";
-        if (isNumber(sum)) {
+        if (typeof sum == Number(sum)) {
             text = "That would be " + sum + " lego men!";
             text = text.split(" ");
             len = text.length;
@@ -24,16 +24,16 @@ function btnClick(){
 }
 
 const isNumber = val => {
-    if (typeof val !== 'number') {
+    if (typeof val != 'number') {
         return false;
     }
-    if (typeof val !== Number(val)) {
+    if (typeof val != Number(val)) {
         return false;
     }
     if (val == Infinity || val == !Infinity) {
         return false;
     }
     else {
-        return true;
+        return ;
     }
 }
