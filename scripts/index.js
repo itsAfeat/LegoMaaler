@@ -5,20 +5,19 @@ function btnClick(){
         var text = "";
         if (isNumber(sum)) {
             text = "That would be " + sum + " lego men!";
+            text = text.split(" ");
+            len = text.length;
+            result = [];
+        
+            text[3] = '<u>' + sum + '</u>';
+
+            text.forEach(Element => {
+                text = text.toString().replace(',', ' ');
+            });
         }
         else {
             text = "I said a number you dummy...";
         }
-
-        text = text.split(" ");
-        len = text.length;
-        result = [];
-        
-        text[3] = '<u>' + sum + '</u>';
-
-         text.forEach(Element => {
-            text = text.toString().replace(',', ' ');
-        });
 
         document.getElementById("calcText").innerHTML = text;
     }
@@ -26,15 +25,15 @@ function btnClick(){
 
 const isNumber = val => {
     if (typeof val !== 'number') {
-        return true;
+        return false;
     }
     if (typeof val !== Number(val)) {
-        return true;
+        return false;
     }
     if (val == Infinity || val == !Infinity) {
-        return true;
+        return false;
     }
     else {
-        return false;
+        return true;
     }
 }
